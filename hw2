@@ -29,3 +29,35 @@ def checkCoordinates(xy):
 
 koordinate = inputKoord(2)
 checkCoordinates(koordinate)
+
+
+#second version, easlyer 
+
+
+
+def InputNumbers(inputText):
+    is_OK = False
+    while not is_OK:
+        try:
+            print(inputText);
+            a = float(input())
+            is_OK = True
+        except ValueError:
+            print("Это не число!")
+    return a
+    
+    
+    def checkCoordinates(x, y):
+        text = 4
+    if x > 0 and y > 0:
+        text = 1
+    elif y < 0 and x > 0:
+        text = 2
+    elif x < 0 and y < 0:
+        text = 3
+    print(f"Точка находится в {text} четверти плоскости")
+    
+    
+    x=InputNumbers("Введи X")
+    y=InputNumbers("Введи Y")
+    checkCoordinates(x, y)
